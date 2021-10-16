@@ -1,0 +1,27 @@
+.logo-user, .menu-filtro{
+    color: var(--White);
+    background-color: var(--azul-escuro);
+}
+
+
+.logo-user{
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+}
+
+.bottom-logout{
+    background-color: var( --White);
+    width: 3.5rem;
+    height: 1.7rem;
+    border-width: medium;
+    border-style: solid;
+    border-color:  var(--azul-escuro);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.bottom-logout a{
+    color:  var(--azul-escuro);
+    padding: 15px;
+}
