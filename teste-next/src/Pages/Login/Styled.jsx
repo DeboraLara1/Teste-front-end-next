@@ -37,7 +37,7 @@ const CardForm = styled.div`
     border-color: rgb(58, 55, 55);
 `
 
-const Formulario = styled.div`
+const Formulario = styled.form`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
