@@ -6,6 +6,9 @@ import  Home  from '../Pages/Home';
 import Login from '../Pages/Login';
 import  PagesInital  from '../Pages/PageInitial';
 import  DetailsUser  from '../Pages/DetailsUser';
+import  RemoveUser  from '../Pages/RemoveUser';
+import  EditUser  from '../Pages/EditUser';
+import  AddUser  from '../Pages/AddUser';
 
 // Costumizando as rotas && deixando privadas
 function CustomRoute({ isPrivate, ...rest}) {
@@ -36,6 +39,18 @@ export default function Routes() {
 
             <CustomRoute isPrivate exact path="/details-user">
                 <DetailsUser />
+            </CustomRoute>
+
+            <CustomRoute isPrivate exact path="/remove-user">
+                <RemoveUser />
+            </CustomRoute>
+
+            <CustomRoute isPrivate exact path="/edit-user">
+                <EditUser />
+            </CustomRoute>
+
+            <CustomRoute isPrivate exact path="/add-user">
+                <AddUser />
             </CustomRoute>
         </Switch>
     )
