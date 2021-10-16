@@ -65,6 +65,14 @@ const Button = styled.button`
     height: 29px;
 `
 
+const ImgEyes = styled.img`
+    display: block;
+    position: absolute;
+    width: 20px;
+    top: 16.4rem;
+    right: 61px;    
+`
+
 
 export default {
     Container,
@@ -76,5 +84,6 @@ export default {
     H1,
     Label,
     Input,
-    Button
+    Button,
+    ImgEyes
 }
