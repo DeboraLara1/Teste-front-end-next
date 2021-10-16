@@ -8,6 +8,18 @@ import { Context } from '../../context/authContext';
 export default () => {
     const {onSubmit, onChange, values, error} = useContext(Context);
 
+    const mostrarOcultarSenha = (mostrar) =>{
+        let senha = document.getElementById("senha")
+
+        // password
+        senha.type === "password" ? senha.type = "text" : senha.type = "password"
+
+        // eye
+        mostrar === "true" ? document.getElementById("não").style.display = "none" : document.getElementById("não").style.display = "block"
+        mostrar === "true" ? document.getElementById("sim").style.display = "block" :  document.getElementById("sim").style.display = "none"
+    
+    }
+
     return(
         <>
         <Styled.Container>
@@ -33,10 +45,10 @@ export default () => {
                             required
                         />
 
-                        <Styled.Label htmlFor="password">Digite sua senha:</Styled.Label>
+                        <Styled.Label htmlFor="senha">Digite sua senha:</Styled.Label>
                         <Styled.Input
                             type="password"
-                            id="password"
+                            id="senha"
                             name="password"
                             minLength="6"
                             placeholder="******"
@@ -44,6 +56,10 @@ export default () => {
                             value={values.password}
                             required
                         />
+
+                        <Styled.ImgEyes src="https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye.svg" id="não" onClick={() => mostrarOcultarSenha('true')} alt="Icone olho visualizar senha" />
+                        <Styled.ImgEyes src="https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye-visi.svg" id="sim" onClick={() => mostrarOcultarSenha('false')} style={{display: "none"}} alt="Icone olho escultar senha" />
+
 
                         {error && (
                             <div className="user-login__error" data-testid="error">{error}</div>
