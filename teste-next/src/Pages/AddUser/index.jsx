@@ -30,8 +30,8 @@ export default ()=>{
                 name="avatar"
                 placeholder="avatar" />   
                 <Styled.DivButtons>
-                    <Styled.Button backgroundColor="#ffd700;" onClick='' >salvar</Styled.Button>
-                    <Styled.Button backgroundColor="#b5b9c0;" onClick=''>Cancelar</Styled.Button> 
+                    <Styled.Button backgroundColor="#ffd700;"  >salvar</Styled.Button>
+                    <Styled.Button backgroundColor="#b5b9c0;" >Cancelar</Styled.Button> 
                 </Styled.DivButtons>
             </Styled.Form>
         </Styled.Div>

@@ -37,25 +37,30 @@ export default () => {
         </Link>
         <Styled.Section>
             <Styled.Table>
-                <Styled.Tr>
-                    <Styled.Th textAlign="left">Nome</Styled.Th>
-                    <Styled.Th>Ações</Styled.Th>
-                </Styled.Tr>
+                <Styled.Thead>
+                    <Styled.Tr>
+                        <Styled.Th textAlign="left">Nome</Styled.Th>
+                        <Styled.Th>Ações</Styled.Th>
+                    </Styled.Tr>
+                </Styled.Thead>
+
                     {listUser.map((list) => (
                         <>
-                            <Styled.Tr>
-                                <Link to={`/details-user/${list.id}`} >
-                                    <Styled.Td key={list.id}>{list.name} </Styled.Td> 
-                                </Link>
-
-                                <Styled.Td textAlign="center"> 
-                                    
-                                        <FaTrash onClick={() => listInitialdelete(list.id)}/> 
-                                    <Link to="/edit-user">
-                                        <FaEdit />
+                            <Styled.Tbody>
+                                <Styled.Tr>
+                                    <Link to={`/details-user/${list.id}`} >
+                                        <Styled.Td key={list.id}>{list.name} </Styled.Td> 
                                     </Link>
-                                </Styled.Td>
-                            </Styled.Tr>
+
+                                    <Styled.Td textAlign="center"> 
+                                        
+                                            <FaTrash onClick={() => listInitialdelete(list.id)}/> 
+                                        <Link to="/edit-user">
+                                            <FaEdit />
+                                        </Link>
+                                    </Styled.Td>
+                                </Styled.Tr>
+                            </Styled.Tbody>
                         </>
                     ))}
             </Styled.Table>

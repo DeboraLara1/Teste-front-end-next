@@ -15,8 +15,8 @@ export default () => {
           <AiOutlineUser className="logo-user" />
         </Dropdown.Toggle>
 
-        <Dropdown.Menu className="bottom-logout">
-          <Dropdown.Item data-testid="handleLogout" onClick={handleLogout} >Sair</Dropdown.Item>
+        <Dropdown.Menu>
+          <Dropdown.Item data-testid="handleLogout" style={{marginTop:'1rem',}} onClick={handleLogout} >Sair</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </>

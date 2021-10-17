@@ -15,13 +15,25 @@ const NewUser = styled.button`
     position: absolute;
     align-items: center;
     border-radius: 5px;
-    left: 5.6rem;
     top: 5rem;
     height: 2rem;
     font-size: 17px;
+    left: 74%;
+    right: 15%;
+    width: 10%;
     
     :hover{
         font-weight: bold;
+    }
+
+    @media only screen and (max-width: 50em) {
+        font-size: 10px;
+        top: 5rem;
+        height: 2rem;
+        font-size: 17px;
+        left: 48%;
+        right: 18%;
+        width: 20%;
     }
 `
 
@@ -29,9 +41,13 @@ const Table = styled.table`
     font-family: arial, sans-serif;
     border-collapse: collapse;
     color: #ffffff;
-    width: 69rem;
+    width: 69%;
+`
+const Thead = styled.thead`
 `
 
+const Tbody = styled.tbody`
+`
 const Tr = styled.tr`
     :nth-child(even) {
         background-color: #dddddd;
@@ -64,6 +80,8 @@ export default {
     NewUser,
     Section,
     Table,
+    Thead,
+    Tbody,
     Tr,
     Th,
     Td
