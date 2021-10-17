@@ -1,22 +1,34 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, setState } from "react";
 import { Link } from 'react-router-dom';
 import Styled from "./PageInitial";
 import {FaTrash, FaEdit} from 'react-icons/fa'
 import ListAPI from '../../Service/apiMock'
 import Header from "../../Components/Header";
 
+
+
 export default () => {
   const [listUser, setListUser] = useState([]);
+//   const [listUserRemoved, setListUserRemoved] = useState([]);
 
     useEffect(() => {
         const listInitial = async () => {
           const list = await ListAPI.getList();
           setListUser(list);
         };
-        ;console.log(listInitial())
-      }, []);
-      console.log(listUser)
+        listInitial()
+    }, []);
+
+    useEffect(() => {
+        
+    }, []);
+    const listInitialdelete = async (id) => {
+        const deleteList= await ListAPI.deleteListById(id);
+        //deleteList.filter
+        deleteList.delete(id)
+    };
+    
     return(
         <>
         <Header />
@@ -37,9 +49,8 @@ export default () => {
                                 </Link>
 
                                 <Styled.Td textAlign="center"> 
-                                    <Link to="/remove-user">
-                                        <FaTrash /> 
-                                    </Link>
+                                    
+                                        <FaTrash onClick={() => listInitialdelete(list.id)}/> 
                                     <Link to="/edit-user">
                                         <FaEdit />
                                     </Link>
@@ -49,6 +60,6 @@ export default () => {
                     ))}
             </Styled.Table>
         </Styled.Section>
-        </>
+    </>
     )
 }

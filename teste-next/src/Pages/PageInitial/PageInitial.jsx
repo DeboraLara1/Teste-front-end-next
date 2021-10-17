@@ -15,7 +15,7 @@ const NewUser = styled.button`
     position: absolute;
     align-items: center;
     border-radius: 5px;
-    right: 24.9rem;
+    left: 5.6rem;
     top: 5rem;
     height: 2rem;
     font-size: 17px;

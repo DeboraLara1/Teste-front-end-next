@@ -7,6 +7,7 @@ const Header = styled.header`
     justify-content: space-between;
     height: 4rem;
     background-color: #000000;
+    padding-left: 1rem;
 `
 
 const MenuFiltro = styled.header`
