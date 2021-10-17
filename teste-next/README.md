@@ -14,9 +14,9 @@ São elas:
 ####  Página inicial
  - Visualizar todos os usuários
  - Acessar os detalhes de um usuário
- - Cadastrar um novo usuário - TODO
- - Alterar um usuário cadastrado - TODO
- - Remover um usuário cadastrado - TODO
+ - Cadastrar um novo usuário - TODO parcial
+ - Alterar um usuário cadastrado - TODO parcial
+ - Remover um usuário cadastrado - TODO parcial
 
  
  
