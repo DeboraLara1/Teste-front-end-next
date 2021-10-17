@@ -30,4 +30,27 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 * Styled-components
 * CSS
 * HTML
+
+## :writing_hand: Informações de acesso
+
+Será porssivel ter acesso a aplicação apenas com esse usuário e senha
+
+* Email : admin@nextShipping.com.br
+* Senha: 123456
  
+## :computer: Intalação do projeto
+
+## Pré-requisitos
+- React 17.0.2
+- Npm
+- Nodejs
+
+## Passo a passo
+
+1 - Clone este repositório;
+<br /> <br />
+2 - Instalar pacote de dependências para fazer build do projeto;
+<br /> `npm install`
+<br /> <br />
+3 - Executar/subir projeto;
+<br /> `ng serve`
