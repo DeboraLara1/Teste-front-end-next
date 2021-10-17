@@ -49,8 +49,11 @@ Será porssivel ter acesso a aplicação apenas com esse usuário e senha
 
 1 - Clone este repositório;
 <br /> <br />
-2 - Instalar pacote de dependências para fazer build do projeto;
+2 - Entre na pasta do projeto
+<br /> `cd ./teste-next`
+<br /> <br />
+3 - Instalar pacote de dependências para fazer build do projeto;
 <br /> `npm install`
 <br /> <br />
-3 - Executar/subir projeto;
-<br /> `ng serve`
+4 - Executar/subir projeto;
+<br /> `npm start`
