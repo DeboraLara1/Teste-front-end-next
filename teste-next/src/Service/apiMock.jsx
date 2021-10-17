@@ -11,5 +11,10 @@ const  getListById = async (id) => {
     return profiles;
 };
 
-export default {getList, getListById}
+const  deleteListById = async (id) => {
+    const deleteItem = await fetch(`${URL}/${id}`, { method: 'DELETE' }).then((resp) => resp.json())
+    return deleteItem;
+};
+
+export default {getList, getListById, deleteListById}
 
