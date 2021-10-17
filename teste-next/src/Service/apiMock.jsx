@@ -6,5 +6,10 @@ const  getList = async () => {
     return profiles;
 };
 
-export default {getList}
+const  getListById = async (id) => {
+    const profiles = await fetch(`${URL}/${id}`).then((resp) => resp.json());
+    return profiles;
+};
+
+export default {getList, getListById}
 

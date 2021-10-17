@@ -51,7 +51,7 @@ const Td = styled.td`
     width: 10rem;
 
     svg{
-        margin-left: 3rem;
+        margin-left: 01rem;
     }
 
     svg:hover{
@@ -59,7 +59,6 @@ const Td = styled.td`
     }
 
 `
-
 
 export default {
     NewUser,
