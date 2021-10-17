@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Form = styled.form` 
     display: flex;
     flex-direction: column;
-    width: 50rem;
+    width: 50%;
     margin: 4rem;
 
 `
