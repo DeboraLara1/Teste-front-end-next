@@ -8,13 +8,18 @@ const Header = styled.header`
     height: 4rem;
     background-color: #000000;
     padding-left: 1rem;
+    padding-top: 1rem;
+
+    img{
+        width: 71%;
+    }
 `
 
-const MenuFiltro = styled.header`
+const MenuFiltro = styled.div`
     display: inline-block;
 `
 
-const MenuLista = styled.header`
+const MenuLista = styled.span`
     display: inline-block;
     padding: 1rem;
     cursor: pointer;
@@ -26,6 +31,11 @@ const MenuLista = styled.header`
         align-items: center;
         color: #ffffff;
 
+    }
+
+    :hover {
+        text-decoration:none; 
+        color: #ffd700;
     }
 
     a:hover {

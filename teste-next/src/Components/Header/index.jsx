@@ -1,10 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import DropdowLogout from '../DropdowLogout';
 import Styled from './Header'
+import { Context } from '../../context/authContext';
 
 export default () => {
+  const { handleLogout } = useContext(Context);
 
   return (
     <>
@@ -16,7 +18,7 @@ export default () => {
 
         <Styled.MenuFiltro >
           <Styled.MenuLista><Link to="/pages-inital"> Usuários</Link></Styled.MenuLista>
-          <Styled.MenuLista><DropdowLogout /></Styled.MenuLista>
+          <Styled.MenuLista onClick={handleLogout}> Encerrar sessão </Styled.MenuLista>
         </Styled.MenuFiltro>
         
       </Styled.Header>

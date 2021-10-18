@@ -20,11 +20,11 @@ const Buttom = styled.button`
 `
 
 const gridContainer = styled.div` 
-    height: 106vh;;
+    height: 100vh;;
     font-size: 16px;
     color: #000000;
     font-family: Montserrat, sans-serif;
-    background: linear-gradient(to top, #282c34 60%, #000000 60%) fixed;
+    background: linear-gradient(to top, #292c33 60%, #000000 60%) fixed;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
@@ -47,6 +47,7 @@ const Card = styled.div`
     border-radius: 2rem;
     box-shadow: 0px 1rem 1.5rem #000000;;
     margin-top: 0,5rem;
+    position: absolute;
 
     @media only screen and (max-width: 40em) {
       max-width: 271px;
@@ -67,7 +68,7 @@ const Img = styled.img`
 `
 const Banner = styled.div`
     background-color: #ffd700;;
-    height: 14rem;
+    height: 13rem;
     display: flex;
     align-items: flex-end;
     justify-content: center;

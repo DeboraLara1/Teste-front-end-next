@@ -6,15 +6,30 @@ const  getList = async () => {
     return profiles;
 };
 
+const  postList = async () => {
+    const profiles = await fetch(URL, { 
+        method: 'POST',
+        body: JSON.stringify({
+            name: '',
+            avatar: ''
+        })
+    }).
+    then((resp) => resp.json());
+    return profiles;
+};
+
+
 const  getListById = async (id) => {
     const profiles = await fetch(`${URL}/${id}`).then((resp) => resp.json());
     return profiles;
 };
 
 const  deleteListById = async (id) => {
-    const deleteItem = await fetch(`${URL}/${id}`, { method: 'DELETE' }).then((resp) => resp.json())
+    const deleteItem = await fetch(`${URL}/${id}`, { 
+        method: 'DELETE' 
+    })
     return deleteItem;
 };
 
-export default {getList, getListById, deleteListById}
+export default {getList, getListById, deleteListById, postList}
 

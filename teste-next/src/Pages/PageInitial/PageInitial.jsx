@@ -5,7 +5,7 @@ const Section = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
 `
 const NewUser = styled.button`
     background-color: #ffd700;
@@ -14,16 +14,18 @@ const NewUser = styled.button`
     display: inline-flex;
     position: absolute;
     align-items: center;
+    justify-content: space-around;
     border-radius: 5px;
-    top: 5rem;
+    top: 8rem;
     height: 2rem;
-    font-size: 17px;
-    left: 74%;
+    font-size: 15px;
+    left: 60%;
     right: 15%;
     width: 10%;
     
     :hover{
         font-weight: bold;
+        font-size: 14px;
     }
 
     @media only screen and (max-width: 50em) {
@@ -41,12 +43,13 @@ const Table = styled.table`
     font-family: arial, sans-serif;
     border-collapse: collapse;
     color: #ffffff;
-    width: 69%;
+    width: 40%;
 `
 const Thead = styled.thead`
 `
 
 const Tbody = styled.tbody`
+    border: 1px solid #dddddd;
     :nth-child(even) {
         background-color: #dddddd;
     }
@@ -64,7 +67,7 @@ const Th = styled.th`
 
 `
 const Td = styled.td`
-    order: 1px solid #dddddd;
+    border: ${(props) => props.border};
     text-align: ${(props) => props.textAlign};
     padding: 8px;
     width: 10rem;

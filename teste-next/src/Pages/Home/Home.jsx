@@ -8,6 +8,14 @@ const Button = styled.button`
     width: 10%;
     height: 4.5%;
     border: none;
+    overflow: hidden;
+    border-radius: 2rem;
+    height: 2rem;
+    font-size: 15px;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    left: 43%;
+    top: 57%;
 `
 
 const Logo = styled.img`

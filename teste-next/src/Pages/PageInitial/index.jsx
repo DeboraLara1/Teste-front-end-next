@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState, useEffect, setState } from "react";
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Styled from "./PageInitial";
 import {FaTrash, FaEdit} from 'react-icons/fa'
 import ListAPI from '../../Service/apiMock'
@@ -10,6 +11,7 @@ import Header from "../../Components/Header";
 
 export default () => {
   const [listUser, setListUser] = useState([]);
+  const history = useHistory();
 //   const [listUserRemoved, setListUserRemoved] = useState([]);
 
     useEffect(() => {
@@ -26,7 +28,8 @@ export default () => {
     const listInitialdelete = async (id) => {
         const deleteList= await ListAPI.deleteListById(id);
         //deleteList.filter
-        deleteList.delete(id)
+        //const filteredAlerts = alerts.filter(x => x.keepAfterRouteChange);
+        window.location.reload();
     };
     
     return(
@@ -52,9 +55,8 @@ export default () => {
                                         <Styled.Td key={list.id}>{list.name} </Styled.Td> 
                                     </Link>
 
-                                    <Styled.Td textAlign="center"> 
-                                        
-                                            <FaTrash onClick={() => listInitialdelete(list.id)}/> 
+                                    <Styled.Td textAlign="center" border=" 1px solid #dddddd;"> 
+                                        <FaTrash onClick={() => listInitialdelete(list.id)}/> 
                                         <Link to="/edit-user">
                                             <FaEdit />
                                         </Link>

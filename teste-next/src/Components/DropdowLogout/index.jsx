@@ -16,7 +16,7 @@ export default () => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item data-testid="handleLogout" style={{marginTop:'1rem',}} onClick={handleLogout} >Sair</Dropdown.Item>
+          <Dropdown.Item  style={{marginTop:'1rem',}} onClick={handleLogout} >Sair</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </>

@@ -1,13 +1,42 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React from "react"; 
+import React, { useState, useEffect,  } from "react"; 
 import Styled from './AddUser'
+import ListAPI from '../../Service/apiMock'
 import Header from "../../Components/Header";
+
+const initialState = {
+    name: '',
+    avatar: ''
+};
 
 export default ()=>{
 
+  const [newUser, setNewUser] = useState([]);
+  const [values, setValues] = useState(initialState);
+
+    useEffect(() => {
+        const listInitial = async () => {
+          const list = await ListAPI.getList();
+          setNewUser(list);
+        };
+        listInitial()
+    }, []);
+
+    function onChange(event) {
+        // extraindo/pegando valores dos imputs
+        const { value, name } = event.target;
+    
+        setValues({
+          ...values,
+          [name]: value,
+        });
+      }
     return(
         <>
         <Header />
+        <Styled.H1>
+            Adicione um novo usuário:
+        </Styled.H1>
         <Styled.Div>
             <Styled.Form >
                 <Styled.Label>Adicione um nome:</Styled.Label>
