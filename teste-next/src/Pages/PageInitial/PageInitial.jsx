@@ -47,6 +47,9 @@ const Thead = styled.thead`
 `
 
 const Tbody = styled.tbody`
+    :nth-child(even) {
+        background-color: #dddddd;
+    }
 `
 const Tr = styled.tr`
     :nth-child(even) {
