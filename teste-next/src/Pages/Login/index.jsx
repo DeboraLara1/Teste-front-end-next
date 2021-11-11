@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import Styled from './Styled.jsx'
 import { Context } from '../../context/authContext';
 
@@ -7,17 +7,19 @@ import { Context } from '../../context/authContext';
 
 export default () => {
     const {onSubmit, onChange, values, error} = useContext(Context);
+    //passamos o valor do type dentro co useState
+    const [ inputType, setInputType ] = useState("password")
+    const [ sourceImage, setSourceImage ] = useState( "https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye.svg" )
 
-    const mostrarOcultarSenha = (mostrar) =>{
-        let senha = document.getElementById("senha")
+    const changeInputSenha= () =>{
+        if(inputType === "password"){
+            setSourceImage("https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye-visi.svg")
+            setInputType("text")
 
-        // password
-        senha.type === "password" ? senha.type = "text" : senha.type = "password"
-
-        // eye
-        mostrar === "true" ? document.getElementById("não").style.display = "none" : document.getElementById("não").style.display = "block"
-        mostrar === "true" ? document.getElementById("sim").style.display = "block" :  document.getElementById("sim").style.display = "none"
-    
+        } else {
+            setSourceImage("https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye.svg")
+            setInputType("password")
+        }
     }
 
     return(
@@ -47,7 +49,7 @@ export default () => {
 
                         <Styled.Label htmlFor="senha">Digite sua senha:</Styled.Label>
                         <Styled.Input
-                            type="password"
+                            type= {inputType}
                             id="senha"
                             name="password"
                             minLength="6"
@@ -57,8 +59,7 @@ export default () => {
                             required
                         />
 
-                        <Styled.ImgEyes src="https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye.svg" id="não" onClick={() => mostrarOcultarSenha('true')} alt="Icone olho visualizar senha" />
-                        <Styled.ImgEyes src="https://qa-commerce.aguiabranca.com.br/_ui/responsive/theme-alpha/images/eye-visi.svg" id="sim" onClick={() => mostrarOcultarSenha('false')} style={{display: "none"}} alt="Icone olho escultar senha" />
+                        <Styled.ImgEyes src={ sourceImage } id="não" onClick={() => changeInputSenha('true')} alt="Icone olho visualizar senha" />
 
 
                         {error && (
